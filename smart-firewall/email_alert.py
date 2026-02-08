@@ -3,8 +3,8 @@ from email.message import EmailMessage
 
 def send_alert(message):
 
-    EMAIL="amanranaa12@gmail.com"
-    PASSWORD="hrst oinn hdif bfgs"
+    EMAIL="yourgmail@gmail.com"
+    PASSWORD="Enter your app password"
 
     msg=EmailMessage()
     msg.set_content(message)
@@ -16,3 +16,4 @@ def send_alert(message):
     server.login(EMAIL,PASSWORD)
     server.send_message(msg)
     server.quit()
+
