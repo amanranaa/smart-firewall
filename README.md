@@ -41,6 +41,20 @@ smart-firewall/
 └── static/
     └── style.css
 
+    
+smart-firewall/
+│
+├── app.py
+├── firewall.py
+├── email_alert.py   👈 HERE
+├── firewall.db
+│
+├── templates/
+│   ├── login.html
+│   └── dashboard.html
+│
+└── static/
+    └── style.css
 
 ## Authentication
 
