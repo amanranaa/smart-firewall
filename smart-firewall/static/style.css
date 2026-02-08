@@ -1,0 +1,113 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+/* BODY */
+body{
+  background:#0b0f1a;
+  color:white;
+  min-height:100vh;
+}
+
+/* HEADER */
+h2{
+  text-align:center;
+  margin:20px 0;
+  color:#00f7ff;
+}
+
+/* FORM */
+form{
+  width:90%;
+  max-width:600px;
+  margin:20px auto;
+  background:#11162a;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 15px rgba(0,247,255,0.4);
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+input,select,button{
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  outline:none;
+}
+
+input,select{
+  width:30%;
+  background:#1a1f3c;
+  color:white;
+}
+
+button{
+  background:#00f7ff;
+  color:black;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#00c4cc;
+}
+
+/* TABLE */
+table{
+  width:90%;
+  margin:30px auto;
+  border-collapse:collapse;
+  background:#11162a;
+  box-shadow:0 0 15px rgba(0,247,255,0.4);
+}
+
+th,td{
+  padding:12px;
+  text-align:center;
+}
+
+th{
+  background:#00f7ff;
+  color:black;
+}
+
+tr:nth-child(even){
+  background:#1a1f3c;
+}
+
+/* CHART */
+canvas{
+  display:block;
+  margin:40px auto;
+  max-width:400px;
+  background:#11162a;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* LOGIN PAGE */
+.login-box{
+  width:300px;
+  margin:120px auto;
+  background:#11162a;
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(0,247,255,0.5);
+}
+
+.login-box input{
+  width:100%;
+  margin-bottom:15px;
+}
+
+.login-box button{
+  width:100%;
+}

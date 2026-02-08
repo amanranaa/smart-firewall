@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Firewall Dashboard</title>
+
+<!-- Link CSS -->
+<link rel="stylesheet" href="/static/style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h2>Firewall Dashboard</h2>
+
+<!-- ADD RULE FORM -->
+<form method="POST">
+
+  <input type="text" name="ip" placeholder="IP Address" required>
+
+  <input type="text" name="port" placeholder="Port" required>
+
+  <select name="action">
+    <option value="BLOCK">BLOCK</option>
+    <option value="ALLOW">ALLOW</option>
+  </select>
+
+  <button type="submit">Add Rule</button>
+
+</form>
+
+<!-- RULE TABLE -->
+<table>
+
+<tr>
+  <th>ID</th>
+  <th>IP</th>
+  <th>Port</th>
+  <th>Action</th>
+</tr>
+
+{% for r in rules %}
+<tr>
+  <td>{{ r[0] }}</td>
+  <td>{{ r[1] }}</td>
+  <td>{{ r[2] }}</td>
+  <td>{{ r[3] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<!-- CHART -->
+<h2>Firewall Analytics</h2>
+
+<canvas id="ruleChart"></canvas>
+
+<script>
+const blocked = {{ blocked }};
+const allowed = {{ allowed }};
+
+new Chart(document.getElementById("ruleChart"), {
+  type: "pie",
+  data: {
+    labels: ["Blocked", "Allowed"],
+    datasets: [{
+      data: [blocked, allowed]
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
