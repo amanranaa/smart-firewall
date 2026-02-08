@@ -26,19 +26,21 @@ A Python-based firewall system with a web interface that allows administrators t
 ---
 
 ## 📂 Project Structure
+
 smart-firewall/
 │
 ├── app.py
 ├── firewall.py
-├── email_alert.py
-├── firewall.db
+├── email_alert.py  
+├── firewall.db  -- Auto Generated
 │
 ├── templates/
-│ ├── login.html
-│ └── dashboard.html
+│   ├── login.html
+│   └── dashboard.html
 │
 └── static/
-  └── style.css
+    └── style.css
+
 
 ## Authentication
 
