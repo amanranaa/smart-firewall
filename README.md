@@ -32,7 +32,7 @@ smart-firewall/
 ├── app.py
 ├── firewall.py
 ├── email_alert.py  
-├── firewall.db  -- Auto Generated
+├── firewall.db  -- create your own
 │
 ├── templates/
 │   ├── login.html
